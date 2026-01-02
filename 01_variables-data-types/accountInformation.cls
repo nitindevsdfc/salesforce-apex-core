@@ -1,5 +1,5 @@
-public global with sharing class MyClass {
-    public static void demoMethod(){
+public global with sharing class accountInformation {
+    public static void information(){
         string accountName = 'Apple Inc India';
         Integer totalEmployees = 78500;
         Decimal revenue = 98956321452.32;
