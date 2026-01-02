@@ -27,8 +27,10 @@ public class salesTransaction{
         Decimal discount =  calculatedPrice * (discountPercentage / 100);
         Decimal totalPrice = calculatedPrice - discount;
 
-        if(isCustomerPremium){
+        if(isCustomerPremium && totalPrice >= 20000){
+            totalPrice -= totalPrice * (5/100);
             System.debug('Final Payable Amount => ' + totalPrice);
+            System.debug('High Value Customer');
         }else{
             System.debug('Final Payable Amount => ' + calculatedPrice);
         }
