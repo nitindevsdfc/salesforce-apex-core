@@ -1,0 +1,247 @@
+Given a person's age, return true if the person is a teenager (age 13 - 19).
+
+isTeenager(5) = false
+
+isTeenager(15) = true
+
+public Boolean isTeenager(Integer age) {
+    if(age >= 13 && age <= 19){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+############################################################################################
+
+Implement a function diff that calculates the absolute difference between two integers.
+
+diff(5, 2) = 3
+
+diff(2, 5) = 3
+
+public Integer diff(Integer a, Integer b) {
+    if((a-b)>=0){
+        return (a-b);
+    }else {
+        return -(a-b);
+    }
+}
+
+############################################################################################
+
+Given Integers a, b, and c, return true if a and b add up to c.
+
+sumEquals(5, 5, 10) = true
+
+sumEquals(2, 8, 9) = false
+
+public Boolean sumEquals(Integer a, Integer b, Integer c) {
+    if(a+b==c){
+        return true;
+    }else {
+        return false;
+    }
+}
+
+############################################################################################
+
+Given three Integers a, b, and c, return true if they are in ascending order. For our purposes, two equal numbers will be considered to be in an ascending order.
+
+ascendingOrder(10, 10, 15) = true
+
+ascendingOrder(15, 14, 13) = false
+
+public Boolean ascendingOrder(Integer a, Integer b, Integer c) {
+    if((a<=b) && (b<=c)){
+        return true;
+    }else {
+        return false;
+    }
+}
+
+############################################################################################
+
+Given a work, prepend it with the correct indefinite article ("a" or "an") followed by a space based on the following rule: words starting with a vowel (a, e, i, o, or u) are prepended with "an", while words starting with any other letter are prepended with "a".
+
+aOrAn('apple') = 'an apple'
+
+aOrAn('banana') = 'a banana'
+
+public String aOrAn(String word) {
+  if(word.startsWith('a') || word.startsWith('e') || word.startsWith('i') ||
+      word.startsWith('o') || word.startsWith('u') ){
+        return ('an' + ' ' + word);
+    }
+    else {
+        return ('a' + ' ' + word);
+    }
+}
+
+############################################################################################
+
+Given three Integers, return the largest
+
+public static Integer findLargest(Integer num1, Integer num2, Integer num3) {
+	if(num1 >= num2 && num1 >= num3){
+        return num1;
+    }else if(num2>=num1 && num2>=num3){
+        return num2;
+    }else {
+        return num3;
+    }
+}
+
+
+############################################################################################
+
+Create a function that given a total bill, and an integer percentage value between 0 and 100, computes the tip at the specified percentage. You can assume the percentage specified will be an integer within the valid range.
+
+For an example, computeTip(200.0, 50) evaluates to 100.0, because 50% of 200 is 100.
+
+public Decimal computeTip(Decimal total, Integer percent) {
+    return (total)*percent/100;
+}
+
+############################################################################################
+
+
+A student passes a course if any two of the following three conditions are true: they have passed the exam, they have passed assignments, and they have passed the course project.
+
+Implement the function isPassed that takes in three parameters passedExam, passedAssignments, and passedProject, and returns true of at least two of the passed variables are true.
+
+isPassed(true, false, true) = true. Student did not pass assignments, but passes overall because they passed the exam and the project.
+
+isPassed(false, false, true) = false. Student only passed the project, and therefore does not pass overall.
+
+
+public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean passedProject) {
+    
+    if((passedExam==true && passedAssignments==true ) || 
+      (passedExam==true && passedProject==true ) ||
+      (passedAssignments ==true && passedProject==true )){
+          return true;
+      }else {
+          return false;
+      }
+
+
+}
+
+
+
+############################################################################################
+
+Given an integer, return true if the integer ends with 0, otherwise return false.
+
+isEndWithZero(12) == false
+
+isEndWithZero(1230) == true
+
+public Boolean isEndWithZero(Integer num){
+     if(math.mod(num,10) == 0){
+         return true;
+     }else {
+         return false;
+     }
+}
+
+############################################################################################
+
+Given Integers a, b, and c, determine if any two of them add up to the third and return 'a', 'b', 'c' depending on which the sum is. If no two numbers add up to a third number, return an empty string. Assume that multiple solutions do not exist.
+
+whichTwo(5, 10, 5) = 'b'
+
+whichTwo(2, 0, 3) = ''
+
+
+public String whichTwo(Integer a, Integer b, Integer c) {
+    if(a + b == c){
+        return 'c';
+    }else if(a + c == b){
+        return 'b';
+    }else if(b + c == a){
+        return 'a';
+    }else {
+        return '';
+    }
+}
+
+############################################################################################
+
+Given an Integer, return 'even' if the Integer is even, or 'odd' if the Integer is odd. Remember to use the Math.mod function.
+
+evenOrOdd(15) = 'odd'
+
+evenOrOdd(-64) = 'even'
+
+public String evenOrOdd(Integer num) {
+    if(Math.mod(num,2) == 0){
+        return 'even';
+    }else{
+        return 'odd';
+    }
+}
+
+
+############################################################################################
+
+Rock beats scissors, scissors beats paper, paper beats rock. Implement the method rockPaperScissors that takes as parameters two strings player1 and player2 representing the moves played by player 1 and player 2, valid moves being 'rock', 'paper', and 'scissors'. Return 1 if player 1 wins, 2 if player 2 wins, and 0 if no one wins.
+
+rockPaperScissors('rock', 'paper') = 2
+
+rockPaperScissors('scissors', 'paper') = 1
+
+rockPaperScissors('paper', 'paper') = 0
+
+public Integer rockPaperScissors(String player1, String player2) {
+
+    
+    player1 = player1.toLowerCase();
+    player2 = player2.toLowerCase();
+
+    if (player1.equals('rock') && player2.equals('scissors')) {
+        return 1;
+    } 
+    else if (player1.equals('rock') && player2.equals('paper')) {
+        return 2;
+    } 
+    else if (player1.equals('scissors') && player2.equals('paper')) {
+        return 1;
+    } 
+    else if (player1.equals('scissors') && player2.equals('rock')) {
+        return 2;
+    } 
+    else if (player1.equals('paper') && player2.equals('rock')) {
+        return 1;
+    } 
+    else if (player1.equals('paper') && player2.equals('scissors')) {
+        return 2;
+    } 
+    else {
+        return 0;
+    }
+}
+
+
+############################################################################################
+
+Given a person's age, return their age group as a string: 'Infant' for ages 0-1, 'Child' for ages 2 - 14, 'Youth' for ages 15 - 21, and 'Adult' for ages 22+.
+
+ageGroup(5) = 'Child'
+
+ageGroup(15) = 'Youth'
+
+public String ageGroup(Integer n) {
+    if (n == null || n < 0) {
+        return 'Invalid Age';
+    } else if (n >= 0 && n <= 1) {
+        return 'Infant';
+    } else if (n >= 2 && n <= 14) {
+        return 'Child';
+    } else if (n >= 15 && n <= 21) {
+        return 'Youth';
+    } else {
+        return 'Adult';
+    }
+}
