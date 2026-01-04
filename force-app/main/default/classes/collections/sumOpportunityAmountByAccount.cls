@@ -17,7 +17,16 @@ public class SumAmount{
         set<Id> accountIdSet = new set<Id>();
 
         for(opportunity opp : opportunitylist){
-            
+
+            if(opp.AccountId == null || opp.Amount == null){
+                continue;
+            }
+
+            if(!amountSumMap.containsKey(opp.AccountId)){
+                amountSumMap.put(opp.AccountId, opp.Amount);
+            }else{
+                amountSumMap.put(opp.AccountId, amountSumMap.get(opp.AccountId) + opp.Amount);
+            }
         }
 
         return amountSumMap;
