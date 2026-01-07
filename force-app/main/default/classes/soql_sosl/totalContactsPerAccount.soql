@@ -1,0 +1,3 @@
+SELECT AccountId, COUNT(Id)
+FROM Contact
+GROUP BY AccountId

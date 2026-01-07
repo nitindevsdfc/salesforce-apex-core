@@ -1,0 +1,1 @@
+SELECT Name, AnnualRevenue From Account ORDER BY AnnualRevenue DESC LIMIT 3

@@ -1,0 +1,2 @@
+SELECT Name, (Select Id, Name From Contacts)
+From Account

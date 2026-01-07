@@ -1,0 +1,4 @@
+SELECT AccountId, COUNT(Id)
+FROM Opportunity
+GROUP BY AccountId
+HAVING COUNT(Id) > 3

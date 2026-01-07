@@ -1,0 +1,3 @@
+SELECT Name, Industry, AnnualRevenue 
+From Account 
+WHERE Industry = 'IT' AND AnnualRevenue > 500000
