@@ -1,0 +1,3 @@
+SELECT LastName, Email 
+From Contact
+ Where LastName != NULL AND Email != NULL
