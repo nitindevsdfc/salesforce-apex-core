@@ -1,0 +1,6 @@
+SELECT Id
+FROM Account
+WHERE Id NOT IN (
+    SELECT AccountId
+    FROM Opportunity
+)
