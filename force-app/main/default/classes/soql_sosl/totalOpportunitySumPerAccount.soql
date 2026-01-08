@@ -1,0 +1,3 @@
+SELECT AccountId, SUM(Amount) TotalAmount
+FROM Opportunity
+GROUP BY AccountId

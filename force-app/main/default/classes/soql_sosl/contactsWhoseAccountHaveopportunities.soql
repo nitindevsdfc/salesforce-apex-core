@@ -1,0 +1,3 @@
+SELECT Id, AccountId, Name 
+FROM Contact 
+WHERE AccountId IN (Select AccountId From opportunity)
