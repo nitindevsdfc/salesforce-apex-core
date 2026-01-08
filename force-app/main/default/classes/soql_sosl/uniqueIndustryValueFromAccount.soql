@@ -1,0 +1,3 @@
+SELECT Industry 
+FROM Account 
+WHERE Industry != NULL GROUP BY Industry 
