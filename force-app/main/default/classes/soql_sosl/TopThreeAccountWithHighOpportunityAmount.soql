@@ -1,0 +1,5 @@
+SELECT AccountId, SUM(Amount) TotalAmount
+FROM Opportunity
+GROUP BY AccountId
+ORDER BY SUM(Amount) DESC NULLS LAST
+LIMIT 3
