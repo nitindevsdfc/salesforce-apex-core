@@ -1,0 +1,3 @@
+SELECT Id, Name, Amount, CloseDate
+From opportunity
+WHERE CloseDate = THIS_MONTH 

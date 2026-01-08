@@ -1,0 +1,3 @@
+SELECT SUM(Amount)
+FROM Opportunity
+WHERE StageName = 'Closed Won'
