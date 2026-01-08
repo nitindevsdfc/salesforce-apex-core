@@ -1,4 +1,4 @@
 SELECT Name, CloseDate, Amount
 FROM Opportunity
 WHERE CloseDate = THIS_MONTH
-AND Amount > 100000
+AND Amount > 10000

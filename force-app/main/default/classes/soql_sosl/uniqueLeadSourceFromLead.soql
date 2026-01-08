@@ -1,0 +1,3 @@
+SELECT LeadSource
+FROM Lead
+GROUP BY LeadSource
