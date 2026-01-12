@@ -15,5 +15,29 @@ public class operation{
         return revString;
     }
 
+    public static Boolean isPalindrome(String input) {
+
+        if (String.isBlank(input)) {
+            return true;
+        }
+
+        input = input.toLowerCase();
+
+        Integer left = 0;
+        Integer right = input.length() - 1;
+
+        while (left < right) {
+
+            if (input.substring(left, left + 1) != input.substring(right, right + 1)) {
+                
+                return false;
+            }
+
+            left++;
+            right--;
+        }
+
+        return true;
+    }
 
 }
