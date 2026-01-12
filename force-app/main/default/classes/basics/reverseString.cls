@@ -40,4 +40,20 @@ public class operation{
         return true;
     }
 
+
+    public static Integer findLargest(List<Integer> integerlist){
+        if(integerlist == null || integerlist.isEmpty()){
+            return null;
+        }
+
+        Integer maximum = integerlist[0];
+
+        for(Integer i : integerlist){
+            if(maximum < i){
+                maximum = i;
+            }
+        }
+        return maximum;
+    }
+
 }
