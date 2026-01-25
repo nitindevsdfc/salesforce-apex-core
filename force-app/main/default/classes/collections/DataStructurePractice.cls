@@ -23,5 +23,20 @@ public class ApexDataStructure{
         System.debug(guestSet);
     }
 
-    
+    public static void pizzaMapTest(){
+
+        Map<String, String> pizzaMap = new Map<String, String>();
+        pizzaMap.put('John','Pepperoni');
+        pizzaMap.put('Sarah', 'Margherita');
+        pizzaMap.put('Mike', 'Supreme');
+        pizzaMap.put('John','Hawaiian');
+        pizzaMap.put('Lisa','Veggie Deluxe');
+        System.debug(pizzaMap.get('Sarah'));
+        System.debug(pizzaMap.Containskey('David'));
+        System.debug('Keys are : ' +pizzaMap.keySet());
+        System.debug('Values are :' +pizzaMap.values());
+        System.debug('Total Size of Map : '+pizzaMap.size());
+        System.debug(pizzaMap);
+        
+    }
 }
